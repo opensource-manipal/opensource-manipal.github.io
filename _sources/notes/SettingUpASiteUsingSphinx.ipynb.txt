@@ -1,0 +1,99 @@
+{
+ "cells": [
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Setting Up A Site Using Sphinx \n",
+    "- Make sure you have Python 3.7 or higher installed.\n",
+    "- Open CMD or Terminal based on your OS. \n",
+    "- Create a folder where you want to create the site , say `sem-4-codes`\n",
+    "- Create a new file, say index.rst with the following contents - \n",
+    "\n",
+    "    ```\n",
+    "    Sem 4 Codes\n",
+    "    =======\n",
+    "\n",
+    "    **Sem 4 Codes** - This site is intended to track all the progress made this semester.\n",
+    "\n",
+    "    ```\n",
+    "\n",
+    "- Create a new virtual environment \n",
+    "```\n",
+    "    python -m venv .venv\n",
+    "    source .venv/bin/activate\n",
+    "    (venv) python -m pip install sphinx\n",
+    "    (venv) sphinx-quickstart docs\n",
+    "\n",
+    "    You should see this structure - \n",
+    "    docs\n",
+    "    ├── build\n",
+    "    ├── make.bat\n",
+    "    ├── Makefile\n",
+    "    └── source\n",
+    "    ├── conf.py\n",
+    "    ├── index.rst\n",
+    "    ├── _static\n",
+    "    └── _templates\n",
+    "```\n",
+    "- Replace the docs/source/index.rst file with the index.rst file you created.\n",
+    "\n",
+    "    `sphinx-build -b html docs/source/ docs/build/html`\n",
+    "\n",
+    "- Open the docs/build/html/index.html file in a browser.\n"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- To render notebooks : \n",
+    "`pip install nbsphinx`\n",
+    "\n",
+    "- In conf.py : \n",
+    "```\n",
+    "    extensions = [\n",
+    "        'nbsphinx',\n",
+    "        'sphinx.ext.mathjax',\n",
+    "    ]\n",
+    "    exclude_patterns = ['_build', '**.ipynb_checkpoints']\n",
+    "```\n",
+    "- Install pandoc - `sudo apt install pandoc`"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "name": "python",
+   "version": "3.11.0b4 (main, Jul 11 2022, 15:47:56) [MSC v.1932 64 bit (AMD64)]"
+  },
+  "orig_nbformat": 4,
+  "vscode": {
+   "interpreter": {
+    "hash": "72b2382ece9768098284d92bbc69d35954e75b60d1e25897d1389c232f4796f0"
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

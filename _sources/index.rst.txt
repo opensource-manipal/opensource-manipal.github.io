@@ -10,6 +10,8 @@ Welcome to opensource's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   notes/notes
+
 **Opensource** is one of the core building blocks of Software Development.
 - This page tracks all the projects demo-ed/resources provided during this talk.
 
